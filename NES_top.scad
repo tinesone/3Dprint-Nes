@@ -52,6 +52,9 @@ module nes_top(){
     translate([7.3,15.6,0.5]){
         difference(){
             cube([15.4,4.2,3.3]);
+            translate([0.2,0.6,0.2]){
+                cube([15,4,3.1]);
+            }
         }
     }
 }
