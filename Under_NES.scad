@@ -1,5 +1,5 @@
 module button(){
-    cube([2,10,0.80]);
+    cube([2,3,0.80]);
 }
 module NES_bottom(){
     difference(){
@@ -24,17 +24,30 @@ module NES_bottom(){
                cylinder(h=6, r=0.380, $fn=100);
            }
         }
+        translate([0.5,0.3,5]){
+            cube([0.21,19.4,0.4]);
+        }
+        translate([25.5,0.3,5]){
+            cube([0.21,19.4,0.4]);
+        }
+        translate([0.5,0.2,5]){
+            cube([25.15,0.2,0.4]);
+        }
+        translate([0.5,19.5,5]){
+            cube([25.15,0.2,0.4]);
+        }
         translate([21,18,2]){
             button();
         }
         translate([18.5,18,2]){
             button();
         }
-        translate([24,18,2.3]){
-            cube([0.3,10,0.3,]);
         }
+    translate([35,0,0]){
+        button();
     }
-    
-
+    translate([30,0,0]){
+        button();
+    }    
 }
 NES_bottom();
