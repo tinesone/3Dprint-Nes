@@ -42,12 +42,17 @@ module NES_bottom(){
         translate([18.5,18,2]){
             button();
         }
-        }
+        translate([15,0,4.97]){
+            rotate([-90,0,0]){
+                cylinder(h=4, r=0.25, $fn=100);
+            }
+        }       
     translate([35,0,0]){
         button();
     }
     translate([30,0,0]){
         button();
     }    
+}
 }
 NES_bottom();
