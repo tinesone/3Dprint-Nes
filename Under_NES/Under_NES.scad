@@ -1,13 +1,29 @@
+$scale = 0.7508;
+
 module button(){
     cube([2,3,1]);
 }
 module Schroefhouder(){
+    $fn = 100;
     difference(){
-        cylinder(d=0.3, h=2.50);
-        translate([0,0,0.50]){
-            cylinder(h=2, d=0.1);
+        cylinder(d=0.3/$scale, h=2.50/$scale);
+        translate([0,0,0.50/$scale]){
+            cylinder(h=2/$scale, d=0.1/$scale);
         }
     }
+}
+module raspberrypiHouder(){
+    Schroefhouder();
+    translate([5.8/$scale,0,0]){
+        Schroefhouder();
+    }
+    translate([0,4.9/$scale,0]){
+    Schroefhouder();
+    }
+    translate([5.8/$scale,4.9/$scale,0]){
+        Schroefhouder();
+    }
+    //cube([5.8/$scale,4.9/$scale,0.2/$scale]);
 }
 module NES_bottom(){
     difference(){
@@ -27,12 +43,12 @@ module NES_bottom(){
         translate([1.6,1.5,1]){
             cube([22.8,17,4]);
         }
-        translate([15,0,4.97]){
+        translate([(6.5+2.85)/$scale,0,4.97]){
            rotate([-90,0,0]){
                cylinder(h=6, r=0.380, $fn=100);
            }
         }
-        translate([10,0,4.97]){
+        translate([(6.5+0.71)/$scale,0,4.97]){
             rotate([-90,0,0]){
                 cylinder(h=4, r=0.25, $fn=100);
             }
@@ -59,6 +75,9 @@ module NES_bottom(){
         translate([21.8,18,2.05]){
             cube([0.5,3,0.5]);
         }
+    }
+    translate([6.5/$scale,6.5/$scale,1]){
+        raspberrypiHouder();
     }
     /*translate([35,0,0]){
         button();

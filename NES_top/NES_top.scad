@@ -1,3 +1,5 @@
+$scale = 0.7508;
+
 module nes_top(){
     difference(){
         union(){
@@ -51,7 +53,7 @@ module nes_top(){
             translate([0,-4,-3]) cube([3.5,0.05,0.06]);
             translate([0,16,-3]) cube([3.5,0.05,0.06]);
         }
-        translate([15,0,0]){
+        translate([(6.5+2.85)/$scale,0,0]){
             rotate([-90,0,0]){
                 cylinder(h=6, r=0.380, $fn=100);
             }
@@ -59,7 +61,7 @@ module nes_top(){
                 cube([0.76,6,0.5]);
             }
         }
-        translate([10,0,0]){
+        translate([(6.5+0.71)/$scale,0,0]){
             rotate([-90,0,0]){
                 cylinder(h=4, r=0.25, $fn=100);
             }
