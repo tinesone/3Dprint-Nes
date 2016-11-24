@@ -3,6 +3,12 @@ $scale = 0.7508;
 module button(){
     cube([2,3,1]);
 }
+module USB(){
+    cube([0.5,1,1.4]);
+    translate([0,0.66,0]){
+        cube([0.1,1,1.4]);
+    }
+}
 module Schroefhouder(){
     $fn = 100;
     difference(){
@@ -87,3 +93,4 @@ module NES_bottom(){
     }*/
 }
 NES_bottom();
+!USB();
