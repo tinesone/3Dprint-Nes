@@ -79,6 +79,12 @@ module nes_top(){
             translate([0.4,0.6,0.2]){
                 cube([14.6,4,3.1]);
             }
+            translate([0.3,1,2.8]){
+                sphere(r=0.201, $fn=100);
+            }
+            translate([14.9,1,2.8]){
+                sphere(r=0.201, $fn=100);
+            }
         }
     }
     

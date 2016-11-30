@@ -12,9 +12,9 @@ module USB(){
 module Schroefhouder(){
     $fn = 100;
     difference(){
-        cylinder(d=0.3/$scale, h=2.50/$scale);
+        cylinder(d=0.50/$scale, h=2.50/$scale);
         translate([0,0,0.50/$scale]){
-            cylinder(h=2/$scale, d=0.1/$scale);
+            cylinder(h=2/$scale, d=0.2/$scale);
         }
     }
 }
@@ -93,4 +93,3 @@ module NES_bottom(){
     }*/
 }
 NES_bottom();
-!USB();
