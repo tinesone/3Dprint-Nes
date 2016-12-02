@@ -32,9 +32,9 @@ module raspberrypiHouder(){
     //cube([5.8/$scale,4.9/$scale,0.2/$scale]);
 }
 module USB(){
-    cube([1.4,2,0.5]);
-    translate([0,0,0.5]){
-        cube([1.4,1.5,0.1]);
+    cube([1.4/$scale,2.1/$scale,0.5/$scale]);
+    translate([0,0,0.5/$scale]){
+        cube([1.4/$scale,1.5/$scale,0.1/$scale]);
     }
 }
 module NES_bottom(){
@@ -87,12 +87,12 @@ module NES_bottom(){
         translate([21.8,18,2.05]){
             cube([0.5,3,0.5]);
         }
-        translate([3,18,1]){
+        translate([3,20-2/$scale,1]){
             rotate([0,-90,0]){
                 USB();
             }
         }
-        translate([4.5,18,1]){
+        translate([4.5,20-2/$scale,1]){
             rotate([0,-90,0]){
                 USB();
             }
