@@ -1,1 +1,3 @@
 *.gcode
+*.stl
+NES_top/NES_top.stl

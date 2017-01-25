@@ -1,4 +1,5 @@
 $scale = 0.7508;
+$fn = 100;
 
 module nes_top(){
     difference(){
@@ -23,9 +24,6 @@ module nes_top(){
         //translate([0.4,0.4,0]){
         //    cube([25.2,19.2,0.2]);
         //}
-        translate([7.5,16,0.5]){
-            cube([15,4,3.5]);
-        }
         translate([4,4,3.9]){
             difference(){
                 cube([3.5,12,0.11]);
@@ -69,21 +67,26 @@ module nes_top(){
                 cube([0.5,4,0.5]);
             }
         }
+        union(){
+            translate([7.7,15.8,0.5]){
+                cube([15,4.3,3.5]);
+                translate([0,0.2,3.3]){
+                    sphere(r=0.2);
+                }
+                translate([15,0.2,3.3]){
+                    sphere(r=0.2);
+                }
+            }
+        }
     }
     
-    translate([7.3,15.6,0.5]){
+    translate([7.5,15.4,0.3]){          ////
         difference(){
             translate([0,0,-0.2]){
                 cube([15.4,4.2,3.5]);
             }
             translate([0.4,0.6,0.2]){
                 cube([14.6,4,3.1]);
-            }
-            translate([0.3,1,2.8]){
-                sphere(r=0.201, $fn=100);
-            }
-            translate([14.9,1,2.8]){
-                sphere(r=0.201, $fn=100);
             }
         }
     }
